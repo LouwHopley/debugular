@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Debugular - a simple debugging assistant</title>
+    <meta name="description" content="A simple and free online tool to easily add and remove console logs between code lines, made by Louw Hopley.">
+    <meta name="author" content="Louw Hopley">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet" media="all">
+    <link href="css/style.css" rel="stylesheet" media="all">
+</head>
+<body>
+    <header role="banner">
+        <h1>Debugular</h1>
+        <h3>- Cheating the debugging process -</h3>
+        <p>Insert (and remove) printf's on all lines quickly and easily to narrow down your bug hunt.</p>
+    </header>
+    <div class="wrap">
+        <main role="main">
+            <section class="controls">
+                <label for="language">Select your programming language:</label>
+                <select id="language"></select>
+            </section>
+            <section class="code-blocks">
+                <div class="code">
+                    <div class="padding">
+                        <textarea id="code_block_clean" placeholder="var a = 1;&#10;var b = 2;&#10;var c = a + b;"></textarea>
+                    </div>
+                </div>
+                <div class="code">
+                    <div class="padding">
+                        <textarea id="code_block_dirty" placeholder="console.log('DEBUGULAR: 1');&#10;var a = 1;&#10;console.log('DEBUGULAR: 2');&#10;var b = 2;&#10;console.log('DEBUGULAR: 3');&#10;var c = a + b;&#10;console.log('DEBUGULAR: 4');"></textarea>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </div>
+    <footer role="contentinfo">
+        <small>Made by <a href="https://www.louwhopley.com">Louw Hopley</a>. Contribute on <a href="https://github.com/louwhopley/debugular">Github</a>. Copyright &copy; <time datetime="2016">2016</time>.</small>
+    </footer>
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-55733222-5', 'auto');
+      ga('send', 'pageview');
+    </script>
+</body>
+</html>
